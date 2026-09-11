@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서비스 소개 및 법정 수당 산정식 | 연장근로수당 계산기</title>
+  <meta name="description" content="근로기준법 제56조에 따른 연장, 야간, 휴일근로수당 가산 법리와 통상임금 산정 원칙을 안내합니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://overtime.enjoy-onepage.com/about.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-amber-600 transition">
+        <span class="w-7 h-7 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs">수당</span>
+        <span>연장근로수당 계산기</span>
+      </a>
+      <a href="/" class="text-xs font-semibold text-amber-600 hover:underline">← 계산기로 돌아가기</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+    <article class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <div>
+        <h1 class="text-2xl font-extrabold text-slate-900">서비스 소개 및 법정 수당 산정식</h1>
+        <p class="text-xs text-slate-500 mt-1">기준: 근로기준법 제56조 및 고용노동부 훈령</p>
+      </div>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">1. 서비스 개발 취지</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          '연장근로수당 계산기'는 근로자가 실제로 일한 야근, 야간근무, 휴일근무에 대해 정당한 법정 초과수당을 확인하고 권리를 보장받을 수 있도록 돕는 비영리성 모의계산 도구입니다. 복잡한 가산율과 통상시급 환산을 자동화하여 누구나 3초 안에 본인의 예상 수당을 산출할 수 있습니다.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">2. 법정 가산율 산정 공식 (근로기준법 제56조)</h2>
+        <div class="space-y-2 text-sm text-slate-700">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong>통상시급 =</strong> (기본급 + 고정 직책/직무 수당 등) ÷ 209시간 (주 40시간 근로자 기준)
+          </div>
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
+            <strong>연장근로수당 =</strong> 연장시간 × 통상시급 × 1.5배 (1일 8시간 또는 주 40시간 초과분)
+          </div>
+          <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-200">
+            <strong>야간근로수당 =</strong> 야간시간 × 통상시급 × 0.5배 가산 (밤 22:00 ~ 익일 06:00)
+          </div>
+          <div class="p-3 bg-rose-50 rounded-xl border border-rose-200">
+            <strong>휴일근로수당 =</strong> 8시간 이내(통상시급 × 1.5배) + 8시간 초과분(통상시급 × 2.0배)
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">3. 법적 유의사항</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          상시 5인 미만 사업장은 근로기준법 제56조가 적용되지 않아 가산수당 없이 1.0배(기본단가)만 산정됩니다. 본 계산 결과는 단순 모의 참고용이며 분쟁 시 관할 지방고용노동관서 또는 공인노무사의 법률 자문을 권장합니다.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    © 2026 연장근로수당 계산기. All rights reserved.
+  </footer>
+</body>
+</html>
