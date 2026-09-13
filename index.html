@@ -608,6 +608,10 @@
           return;
         }
         
+        // Safe: only format currency/salary inputs
+        const isMoney = name.includes('salary') || name.includes('bonus') || name.includes('wage') || name.includes('pay') || name.includes('money') || name.includes('cost');
+        if (!isMoney) return;
+
         // Listen to input
         input.addEventListener('input', function(e) {
           if (this.type === 'number') return; // native number handles own UI
