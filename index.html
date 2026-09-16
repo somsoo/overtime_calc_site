@@ -24,44 +24,57 @@
 <link href="/icon.png" rel="apple-touch-icon"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://overtime.enjoy-onepage.com/#webapp",
-        "name": "연장근로수당 계산기",
-        "url": "https://overtime.enjoy-onepage.com/",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "근로기준법 제56조에 따른 연장(1.5배), 야간(0.5배 가산), 휴일(1.5~2배) 법정 가산수당과 통상시급(209시간)을 실시간 모의계산합니다.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://overtime.enjoy-onepage.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "연장·야간·휴일 근로수당 가산 요율은 어떻게 되나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "연장근로는 통상시급의 150%(1.5배), 야간근로(22시~06시)는 50% 추가 가산, 휴일근로는 8시간 이내 150%, 8시간 초과분은 200%(2배)가 지급됩니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "5인 미만 사업장도 연장수당 1.5배를 받을 수 있나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "근로기준법상 5인 미만 사업장은 제56조(가산수당)가 적용되지 않아 원칙적으로 1.0배만 지급됩니다. 단, 근로계약서나 취업규칙에 가산 지급 약정이 있다면 청구 가능합니다."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://overtime.enjoy-onepage.com/#webapp",
+      "name": "이번 달 내 야근·휴일수당 얼마일까?",
+      "url": "https://overtime.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "월급과 연장·야간·휴일 근무시간을 입력하면 근로기준법 1.5배~2배 가산수당과 통상시급, 총 예상 수당을 즉시 계산합니다.",
+      "image": "https://overtime.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://overtime.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "포괄임금제 계약자도 연장근로수당을 따로 청구할 수 있나요?\n▼",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "근로계약서에 포함된 약정 연장근로시간(예: 월 20시간)을 초과하여 실제로 근무한 시간에 대해서는 당연히 추가 법정 가산수당을 청구할 수 있습니다. 또한 업무시간 산정이 명확히 가능한 일반 사무직종의 부당한 포괄임금제 계약은 법적 효력이 무효로 판단될 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "통상시급 계산 시 기본급 외에 어떤 수당이 포함되나요?\n▼",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "정기적·일률적·고정적으로 지급되는 식대, 직책수당, 직무수당, 면허수당 등은 모두 통상임금에 산입됩니다. 반면 근무 실적에 따라 차등 지급되는 인센티브나 실비변상적 출장여비는 제외됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "휴일에 야간까지 일하면 수당을 몇 배로 받나요?\n▼",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "각 사유별 가산율이 중복으로 더해집니다. 휴일 8시간 이내 근로(150%) 중에 밤 10시 이후 야간근로가 겹치면 야간가산 50%가 더해져 총 200%(2배)가 되며, 휴일 8시간 초과분(200%)에 야간까지 겹치면 총 250%(2.5배)의 수당이 발생합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <link href="https://overtime.enjoy-onepage.com/rss.xml" rel="alternate" title="연장근로수당 계산기 | 야간·휴일수당 및 통상시급 모의계산 RSS Feed" type="application/rss+xml"/>
 <link href="https://overtime.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
