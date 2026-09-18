@@ -342,7 +342,7 @@
 </table>
 </div>
 <p class="text-[11px] text-slate-500 mt-3 leading-relaxed">
-            * 상시 5인 미만 사업장은 근로기준법 제56조(가산임금)가 적용되지 않아 100% 기본 단가만 지급됩니다. 위 선택창에서 사업장 규모를 확인하세요.
+            * 상시 5인 미만 사업장은 연장·야간근로 가산(50%)은 제외되나, 휴일근로수당(근로기준법 제56조 제2항)은 사업장 규모와 무관하게 8시간 이내 150%, 8시간 초과 200%가 법정 보장됩니다.
           </p>
 </div>
 <!-- Practical Guides Section -->
@@ -545,16 +545,12 @@
       const otRate = isOver5 ? 1.5 : 1.0;
       const nightRate = isOver5 ? 0.5 : 0.0;
       
-      // Holiday: 8 hours under = 1.5, over 8 = 2.0 (if under 5, 1.0)
+      // Holiday: 근로기준법 제56조 제2항 단서 (8시간 이내 1.5배, 8시간 초과 2.0배는 5인 미만 사업장도 적용)
       let holPay = 0;
-      if (isOver5) {
-        if (holidayHours <= 8) {
-          holPay = holidayHours * hourlyRate * 1.5;
-        } else {
-          holPay = (8 * hourlyRate * 1.5) + ((holidayHours - 8) * hourlyRate * 2.0);
-        }
+      if (holidayHours <= 8) {
+        holPay = holidayHours * hourlyRate * 1.5;
       } else {
-        holPay = holidayHours * hourlyRate * 1.0;
+        holPay = (8 * hourlyRate * 1.5) + ((holidayHours - 8) * hourlyRate * 2.0);
       }
 
       const otPay = otHours * hourlyRate * otRate;
@@ -591,7 +587,7 @@
       document.getElementById('tableNightPay').innerText = formatWon(nightPay);
 
       document.getElementById('tableHolidayHours').innerText = holidayHours + '시간';
-      document.getElementById('tableHolidayRate').innerText = isOver5 ? (holidayHours > 8 ? '150%(8h이내) + 200%' : '150% (8h 이내)') : '100% (가산 없음)';
+      document.getElementById('tableHolidayRate').innerText = holidayHours > 8 ? '150%(8h이내) + 200%' : '150% (8h 이내)';
       document.getElementById('tableHolidayPay').innerText = formatWon(holPay);
 
       syncUrl();
