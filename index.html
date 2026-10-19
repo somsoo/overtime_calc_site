@@ -499,7 +499,7 @@
 <!-- 하단 대형 배너 (푸터 직전) -->
 <script>
     function parseNum(val) {
-      return parseFloat(String(val).replace(/[^0-9.-]/g, '')) || 0;
+      return Math.max(0, parseFloat(String(val).replace(/[^0-9.-]/g, '')) || 0);
     }
 
     function formatWon(val) {
@@ -521,11 +521,11 @@
       const nightHours = parseNum(document.getElementById('nightHours').value);
       const holidayHours = parseNum(document.getElementById('holidayHours').value);
 
-      document.getElementById('otHoursText').innerText = otHours + '시간';
-      document.getElementById('nightHoursText').innerText = nightHours + '시간';
-      document.getElementById('holidayHoursText').innerText = holidayHours + '시간';
-      document.getElementById('salaryFormatted').innerText = formatWon(monthlySalary);
-      document.getElementById('calculatedHourly').innerText = formatWon(hourlyRate);
+      document.getElementById('otHoursText').textContent = otHours + '시간';
+      document.getElementById('nightHoursText').textContent = nightHours + '시간';
+      document.getElementById('holidayHoursText').textContent = holidayHours + '시간';
+      document.getElementById('salaryFormatted').textContent = formatWon(monthlySalary);
+      document.getElementById('calculatedHourly').textContent = formatWon(hourlyRate);
 
       // Multipliers
       const otRate = isOver5 ? 1.5 : 1.0;
@@ -550,34 +550,34 @@
       // Update badge
       const badge = document.getElementById('bizBadge');
       if (isOver5) {
-        badge.innerText = '5인 이상 사업장 (150%~200% 가산)';
+        badge.textContent = '5인 이상 사업장 (150%~200% 가산)';
         badge.className = 'text-xs text-amber-100 font-medium';
       } else {
-        badge.innerText = '5인 미만 사업장 (기본단가 100% 적용)';
+        badge.textContent = '5인 미만 사업장 (기본단가 100% 적용)';
         badge.className = 'text-xs text-amber-200 font-medium';
       }
 
       // Update Result Cards
-      document.getElementById('resTotalAllowance').innerText = Math.round(totalAllowance).toLocaleString('ko-KR');
-      document.getElementById('resOtPay').innerText = formatWon(otPay);
-      document.getElementById('resNightPay').innerText = formatWon(nightPay);
-      document.getElementById('resHolidayPay').innerText = formatWon(holPay);
-      document.getElementById('resTotalSalary').innerText = formatWon(totalEstimatedSalary);
+      document.getElementById('resTotalAllowance').textContent = Math.round(totalAllowance).toLocaleString('ko-KR');
+      document.getElementById('resOtPay').textContent = formatWon(otPay);
+      document.getElementById('resNightPay').textContent = formatWon(nightPay);
+      document.getElementById('resHolidayPay').textContent = formatWon(holPay);
+      document.getElementById('resTotalSalary').textContent = formatWon(totalEstimatedSalary);
 
       // Update Breakdown Table
-      document.getElementById('tableBaseHourly').innerText = formatWon(hourlyRate);
-      document.getElementById('tableBaseWage').innerText = formatWon(monthlyTotal);
-      document.getElementById('tableOtHours').innerText = otHours + '시간';
-      document.getElementById('tableOtRate').innerText = isOver5 ? '150% (통상×1.5)' : '100% (가산 없음)';
-      document.getElementById('tableOtPay').innerText = formatWon(otPay);
+      document.getElementById('tableBaseHourly').textContent = formatWon(hourlyRate);
+      document.getElementById('tableBaseWage').textContent = formatWon(monthlyTotal);
+      document.getElementById('tableOtHours').textContent = otHours + '시간';
+      document.getElementById('tableOtRate').textContent = isOver5 ? '150% (통상×1.5)' : '100% (가산 없음)';
+      document.getElementById('tableOtPay').textContent = formatWon(otPay);
 
-      document.getElementById('tableNightHours').innerText = nightHours + '시간';
-      document.getElementById('tableNightRate').innerText = isOver5 ? '+50% 추가 가산' : '0% (가산 없음)';
-      document.getElementById('tableNightPay').innerText = formatWon(nightPay);
+      document.getElementById('tableNightHours').textContent = nightHours + '시간';
+      document.getElementById('tableNightRate').textContent = isOver5 ? '+50% 추가 가산' : '0% (가산 없음)';
+      document.getElementById('tableNightPay').textContent = formatWon(nightPay);
 
-      document.getElementById('tableHolidayHours').innerText = holidayHours + '시간';
-      document.getElementById('tableHolidayRate').innerText = !isOver5 ? '100% (가산 없음)' : (holidayHours > 8 ? '150%(8h이내) + 200%' : '150% (8h 이내)');
-      document.getElementById('tableHolidayPay').innerText = formatWon(holPay);
+      document.getElementById('tableHolidayHours').textContent = holidayHours + '시간';
+      document.getElementById('tableHolidayRate').textContent = !isOver5 ? '100% (가산 없음)' : (holidayHours > 8 ? '150%(8h이내) + 200%' : '150% (8h 이내)');
+      document.getElementById('tableHolidayPay').textContent = formatWon(holPay);
 
       syncUrl();
     }
