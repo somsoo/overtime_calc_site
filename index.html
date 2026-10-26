@@ -7,8 +7,9 @@
 
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <!-- PAGE:HEAD START -->
   <title>연장근로수당 계산기 | 2026년 야간·휴일수당 및 통상시급 모의계산</title>
-  <meta content="월급과 연장·야간·휴일 근무시간을 입력하면 근로기준법 제56조 1.5배~2배 가산수당과 통상시급, 총 예상 수당을 즉시 계산하고 명세서 PNG로 저장합니다." name="description"/>
+  <meta content="월급과 연장·야간·휴일 근무시간을 입력하면 근로기준법 제56조 1.5배~2배 가산수당과 통상시급, 총 예상 수당을 즉시 계산합니다." name="description"/>
   <meta content="연장근로수당 계산기, 야간수당 계산, 휴일근로수당, 통상시급 계산, 주52시간 연장한도, 포괄임금제 차액, 수당 산정 내역서" name="keywords"/>
   <meta content="index, follow" name="robots"/>
   <link href="https://overtime.enjoy-onepage.com/" rel="canonical"/>
@@ -81,6 +82,7 @@
   </script>
   <link href="https://overtime.enjoy-onepage.com/rss.xml" rel="alternate" title="연장근로수당 계산기 | 야간·휴일수당 및 통상시급 모의계산 RSS Feed" type="application/rss+xml"/>
   <link href="https://overtime.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+  <!-- PAGE:HEAD END -->
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
 
   <!-- Global Guards & Layout Shields -->
@@ -1040,6 +1042,137 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    /* Remodel Styles: Extra Table, Checkpoints & Sublinks */
+    .extra-section {
+      margin: 24px auto;
+      max-width: 1040px;
+    }
+    .extra-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .extra-table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.76rem;
+    }
+    .extra-table th, .extra-table td {
+      white-space: normal;
+      line-height: 1.25;
+      padding: 6px 2px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      word-break: break-all;
+    }
+    .extra-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.72rem;
+    }
+    .extra-table td.td-time {
+      font-weight: 600;
+      color: #0f172a;
+      background: #f8fafc;
+      font-size: 0.74rem;
+    }
+    .extra-table td.td-val {
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 0.72rem;
+    }
+    .checkpoints-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-top: 16px;
+    }
+    .checkpoints-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .checkpoint-item {
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #334155;
+    }
+    .checkpoint-item:last-child {
+      margin-bottom: 0;
+    }
+    .checkpoint-item strong {
+      color: #0f172a;
+    }
+    .sublinks-section {
+      margin: 24px auto;
+      max-width: 1040px;
+    }
+    .sublinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .sublinks-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .sublinks-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    .sublinks-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sublink-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border-radius: 8px;
+      color: #1e293b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .sublink-item a:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    .sublink-item a span.arrow {
+      color: #64748b;
+      font-size: 0.8rem;
+    }
   </style>
 
   <script id="math-guard">
@@ -1087,6 +1220,7 @@
   <main class="main-wrap">
     <!-- Hero Section -->
     <section class="hero-section">
+      <!-- PAGE:HERO START -->
       <div class="hero-badge">
         <span>⏰</span>
         <span>근로기준법 제56조 법정 가산수당 기준</span>
@@ -1095,6 +1229,7 @@
       <p class="hero-desc">
         기본급과 연장·야간·휴일 근무시간을 입력하면 통상시급과 법정 1.5배~2.0배 가산수당을 즉시 산출하고 명세서 PNG로 저장합니다.
       </p>
+      <!-- PAGE:HERO END -->
     </section>
 
     <!-- Main Calculation Grid -->
@@ -1201,7 +1336,7 @@
 
         <!-- Guide Notice -->
         <div class="notice-box" id="overtimeNotice">
-          <strong>💡 법정 가산율(근로기준법 제56조):</strong> 연장 150%, 야간 +50% 추가 가산(연장과 겹치면 200%), 휴일 8시간 이내 150%(8시간 초과분 200%)가 적용됩니다. 5인 미만 사업장은 법정 가산 없이 100%가 적용됩니다.
+          <strong>💡 법정 가산율(근로기준법 제56조):</strong> 연장 150%, 야간 +50% 추가 가산(연장과 겹치면 200%), 휴일 8시간 이내 150%(8시간 초과분 200%)가 적용됩니다. 상시 4명 이하(5인 미만) 사업장에는 근로기준법 제56조의 연장·야간·휴일 가산이 적용되지 않습니다(시행령 제7조 [별표 1]). 이 경우 가산 없이 통상시급 100%로 계산합니다.
         </div>
       </section>
 
@@ -1326,6 +1461,34 @@
       </section>
     </div>
 
+    <!-- PAGE:EXTRA START --><!-- PAGE:EXTRA END -->
+    <!-- PAGE:SUBLINKS START -->
+    <section class="sublinks-section">
+      <div class="sublinks-grid">
+        <div class="sublinks-card">
+          <div class="sublinks-card-title">📊 월급(통상임금) 구간별 야근·연장·휴일수당 계산표</div>
+          <ul class="sublinks-list">
+            <li class="sublink-item"><a href="/wage-min-2026.html"><span>2026 최저임금 (시급 10,320원 · 월 215만)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-250.html"><span>월급 250만 원 (시급 11,962원 · 1.5배 수당)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-300.html"><span>월급 300만 원 (시급 14,354원 · 1.5배 수당)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-350.html"><span>월급 350만 원 (시급 16,746원 · 1.5배 수당)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-400.html"><span>월급 400만 원 (시급 19,139원 · 1.5배 수당)</span><span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+        <div class="sublinks-card">
+          <div class="sublinks-card-title">📌 수당 유형·사업장 규모 &amp; 통상시급 209시간 핵심 가이드</div>
+          <ul class="sublinks-list">
+            <li class="sublink-item"><a href="/guide-holiday-pay.html"><span>휴일근로수당 (8시간 이내 1.5배 · 초과 2배)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-night-pay.html"><span>야간근로수당 (22시~06시 +0.5배 · 연장 중복)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-under5-biz.html"><span>5인 미만 사업장 수당 (가산 없이 100% 지급)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-ordinary-wage-209.html"><span>통상시급 209시간 계산법 (기본급+고정수당)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-inclusive-wage.html"><span>포괄임금제 고정OT 초과분 추가 수당 정산</span><span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- PAGE:SUBLINKS END -->
+
     <!-- Mid AdSense Banner (Slot 1186914926) -->
     <!-- ADSENSE START: mid -->
     <div class="ad-box ad-mid" style="max-width:1080px;margin:20px auto;text-align:center;">
@@ -1342,6 +1505,7 @@
     <!-- FAQ Accordion -->
     <section class="faq-section">
       <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
+      <!-- PAGE:FAQ START -->
       <div class="faq-list">
         <details class="faq-item">
           <summary class="faq-question">
@@ -1371,6 +1535,7 @@
           </p>
         </details>
       </div>
+      <!-- PAGE:FAQ END -->
     </section>
 
     <!-- Related Utilities Section -->
@@ -1410,8 +1575,8 @@
         <div class="cluster-title">근로기준법 실무 가이드</div>
         <div class="cluster-desc">연장·야간·휴일 가산수당 통상임금 계산법 및 노동부 기준</div>
       </div>
-      <a class="cluster-btn" href="https://finance-kr.enjoy-onepage.com/2026/09/25/대안신용평가-대출조건/" target="_blank" rel="noopener noreferrer">
-        수당 가이드 읽기 →
+      <a class="cluster-btn" href="https://smallbiz.enjoy-onepage.com/" target="_blank" rel="noopener noreferrer">
+        5인 미만 사업장 퇴직금·실업급여 계산기 바로가기 →
       </a>
     </div>
 
